@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.ali.filmtest.ui.HomeFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detalsFilmFragment"
+            app:destination="@id/detalsFilmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalsFilmFragment"
+        android:name="uz.ali.filmtest.ui.detal.DetalsFilmFragment"
+        android:label="fragment_detals_film"
+        tools:layout="@layout/fragment_detals_film" >
+        <action
+            android:id="@+id/action_detalsFilmFragment_to_infoActorFragment"
+            app:destination="@id/infoActorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoActorFragment"
+        android:name="uz.ali.filmtest.ui.inf.InfoActorFragment"
+        android:label="fragment_info_actor"
+        tools:layout="@layout/fragment_info_actor" />
+
+
+</navigation>
