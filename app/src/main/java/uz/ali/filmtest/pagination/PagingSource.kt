@@ -1,5 +1,6 @@
 package uz.ali.filmtest.pagination
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import retrofit2.Response
@@ -14,12 +15,14 @@ class PagingSource(
 ) : PagingSource<Int, ResultModel>() {
 
     override fun getRefreshKey(state: PagingState<Int, ResultModel>): Int? {
+        Log.d("dsads", "load: 222")
         return null
     }
 
     override suspend fun load(params: LoadParams<Int>):
             LoadResult<Int, ResultModel> {
 
+        Log.d("dsads", "load: 111")
         return try {
             val currentPage = params.key ?: 1
             var response:Response<ModelFilms> ?=null
@@ -27,12 +30,12 @@ class PagingSource(
                 response = apiService.getPopular(currentPage,API_KEY)
             }
             if (type==2){
-                response = apiService.getTopRated(currentPage,API_KEY)
+                response = apiService.getPopular(currentPage,API_KEY)
             }
             if (type==3){
-                response = apiService.getUpcoming(currentPage,API_KEY)
+                response = apiService.getPopular(currentPage,API_KEY)
             }
-
+            Log.d("dsdsdsdsffdfd", "load: 111")
             val responseData = mutableListOf<ResultModel>()
             val data = response?.body()?.results ?: emptyList()
 

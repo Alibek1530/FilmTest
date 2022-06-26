@@ -1,5 +1,6 @@
 package uz.ali.filmtest.ui.homelist
 
+import android.util.Log
 import androidx.lifecycle.*
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
@@ -15,15 +16,18 @@ class HomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     var listPopular = Pager(PagingConfig(pageSize = 1)) {
+     //   PagingSource()
         PagingSource(apiService,1)
     }.flow.cachedIn(viewModelScope)
 
 
     var listTopRated = Pager(PagingConfig(pageSize = 1)) {
+      //  PagingSource()
         PagingSource(apiService,2)
     }.flow.cachedIn(viewModelScope)
 
     var listUpcoming = Pager(PagingConfig(pageSize = 1)) {
+        //PagingSource()
         PagingSource(apiService,3)
     }.flow.cachedIn(viewModelScope)
 }

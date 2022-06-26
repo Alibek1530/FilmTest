@@ -2,6 +2,7 @@ package uz.ali.filmtest.ui.homelist
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -53,6 +54,7 @@ class FilmsListFragment(val homeFragment: HomeFragment, var type: Int) : Fragmen
             lifecycleScope.launch {
                 viewModel.listPopular.collectLatest {
                     adapterr.submitData(it)
+                    Log.d("dsads", "load: 444")
                 }
             }
         }
@@ -60,6 +62,7 @@ class FilmsListFragment(val homeFragment: HomeFragment, var type: Int) : Fragmen
             lifecycleScope.launch {
                 viewModel.listTopRated.collectLatest {
                     adapterr.submitData(it)
+                    Log.d("dsads", "load: 4441")
                 }
             }
         }
@@ -67,10 +70,10 @@ class FilmsListFragment(val homeFragment: HomeFragment, var type: Int) : Fragmen
             lifecycleScope.launch {
                 viewModel.listUpcoming.collectLatest {
                     adapterr.submitData(it)
+                    Log.d("dsads", "load: 44422")
                 }
             }
         }
-
     }
 
     fun setReflash() {

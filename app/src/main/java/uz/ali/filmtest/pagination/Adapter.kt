@@ -57,6 +57,5 @@ class Adapter(val filmsListFragment: FilmsListFragment) : PagingDataAdapter<Resu
                 filmsListFragment.setPosClick(model?.id.toString())
             }
         }
-
     }
 }
