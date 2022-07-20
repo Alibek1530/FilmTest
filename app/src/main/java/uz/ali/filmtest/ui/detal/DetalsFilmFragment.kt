@@ -9,12 +9,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.google.android.youtube.player.*
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import uz.ali.filmtest.contents.Contents.idKino
 import uz.ali.filmtest.databinding.FragmentDetalsFilmBinding
 import java.text.SimpleDateFormat
@@ -94,6 +98,13 @@ class DetalsFilmFragment : Fragment() {
         viewModel.getVideosImages(idFilm)
 
         setTimer()
+    }
+
+    fun sef(){
+        val l=LinkedList<String>()
+        l.add("dsds")
+        l.add("dsds")
+
     }
 
     fun setViewPager(model: List<Backdrop>) {
@@ -176,6 +187,7 @@ class DetalsFilmFragment : Fragment() {
 
         binding.isVis1.visibility = View.VISIBLE
         binding.isVis2.visibility = View.VISIBLE
+
     }
 
     fun getTimeFormat(time: Int): String {
