@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,6 +26,7 @@ class FilmsListFragment(val homeFragment: HomeFragment, var type: Int) : Fragmen
 
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
+ //   private val viewModel:HomeViewModel by viewModels() // endi shuni ishlataman
 
 
     lateinit var binding: FragmentPopularBinding
@@ -37,7 +39,7 @@ class FilmsListFragment(val homeFragment: HomeFragment, var type: Int) : Fragmen
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java) // shuni urniga
 
         adapterr = Adapter(this)
 

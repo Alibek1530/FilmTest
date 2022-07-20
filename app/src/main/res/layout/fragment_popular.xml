@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.homelist.FilmsListFragment">
 
-
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/reflesh"
         android:layout_width="match_parent"

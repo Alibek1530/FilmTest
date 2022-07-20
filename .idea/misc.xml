@@ -26,10 +26,11 @@
         <entry key="..\:/Users/Lenovo/FilmTest/app/src/main/res/layout/item_p_image.xml" value="0.209375" />
         <entry key="..\:/Users/Lenovo/FilmTest/app/src/main/res/layout/item_video_actor_layout.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/FilmTest/app/src/main/res/layout/item_video_image.xml" value="0.209375" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/FilmTest/app/src/main/res/layout/fragment_popular.xml" value="0.28940217391304346" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

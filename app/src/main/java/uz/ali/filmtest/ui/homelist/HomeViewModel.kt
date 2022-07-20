@@ -14,7 +14,7 @@ class HomeViewModel @Inject constructor(
     private val apiService: ApiService
 ) : ViewModel() {
 
-    var listPopular = Pager(PagingConfig(pageSize = 1)) {
+    var listPopular = Pager(PagingConfig(pageSize = 1)) { //pageSize boshlangich page
         PagingSource(apiService,1)
     }.flow.cachedIn(viewModelScope)
 
